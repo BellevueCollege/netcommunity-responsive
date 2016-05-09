@@ -1,0 +1,219 @@
+/* Form Styles and Overrides */
+
+table.BBFormTable {
+	display: block;
+	font-size: $body-font-size;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	table,
+	tbody,
+	tr,
+	td {
+		display: block;
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		border: 0;
+	}
+
+	tbody:last-child {
+		clear: both;
+	}
+
+	.DonationCaptureTextboxWide,
+	.BBFormTextArea {
+		width: 100%;
+	}
+
+	input {
+		width: auto;
+		max-width: 100% !important;
+	}
+
+	td {
+		height: 100%;
+		text-align: left;
+		border: 0;
+
+		label {
+			display: inline;
+			white-space: normal;
+			font-weight: normal;
+		}
+	}
+
+	tr {
+		float: left;
+		height: auto;
+		width: 100%;
+
+		td.BBFieldControlCell {
+			width: 85%;
+			float: left;
+		}
+
+		/* Float help icon to fix formatting */
+		td.BBFieldControlCell a.BBLinkHelpIcon {
+			margin: 0;
+			padding: 0;
+			display: block;
+			float: right;
+		}
+
+		td.BBFieldCaption {
+			background: transparent;
+			border: 0px;
+		}
+
+		td:nth-child(3),
+		td.BBFormRequiredFieldMarker {
+			width: 10%;
+			float: left;
+			text-align: right;
+		}
+
+		td.BBFieldControlCell {
+			table {
+				clear: both;
+				float: left;
+
+				tr:last-child {
+					clear: both;
+				}
+
+				tr td {
+					display: inline;
+				}
+				tr td.BBFieldControlCell {
+					float: left;
+					width: 47%;
+				}
+			}
+		}
+
+	}
+
+	tbody tr td.BBListingHeading,
+	tbody tr td.BBMessage,
+	tbody:first-child tr td[colspan="2"] {
+		border: 0px;
+		float: none;
+		width: 100%;
+	}
+	/* Section Headings */
+	tbody tr td.BBListingHeading {
+		background: transparent;
+		border-bottom: 2px solid $primary-color !important;
+		height: auto;
+		margin-bottom: 0.5em;
+
+		span {
+			color: $primary-color;
+			font-size: 2rem;
+			font-weight: normal;
+			height: auto;
+			line-height: 1.25;
+		}
+	}
+
+	.BBFormChecklist input,
+	.BBFieldCheckboxCaption input {
+		margin-right: .5em;
+	}
+
+	table,
+	table tr,
+	table td {
+		border: 0;
+		display: block;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+
+	table table,
+	table table * {
+		display: inline;
+		float: none;
+	}
+
+	table.taLeft {
+		width: 100%;
+
+		tr td.BBFieldControlCell:nth-child(1) {
+			display: block;
+			width: 60%;
+
+			input {
+				margin-right: 0.5em;
+				margin-top: .75rem;
+				float: left;
+			}
+
+			span {
+				display:block;
+			}
+		}
+
+		tr td.BBFieldControlCell:nth-child(2) {
+			display: block;
+			width: 30%;
+			white-space: nowrap;
+		}
+	}
+}
+
+/* Primary Form Breakpoint  */
+
+@media ($bp-larger-than-desktop) {
+	table.BBFormTable {
+		tr {
+			td {
+				margin-left: 4%;
+			}
+			td:first-child {
+				margin-left: 0px;
+			}
+			td.BBFieldCaption {
+				width: 28%;
+				float: left;
+				text-align: right;
+				height: 100%;
+
+				label {
+					margin-right: 0.5em;
+				}
+			}
+			td.BBFieldControlCell {
+				width: 58%;
+				float: left;
+			}
+			td:nth-child(3),
+			td.BBFormRequiredFieldMarker {
+				width: 4%;
+				float: left;
+				text-align: right;
+			}
+			/* Style Confirmation */
+			td.BBFormReadonlyValue {
+				margin-left: 4%;
+				float: left;
+				width: 58%;
+			}
+		}
+		tr > td.taLeft div.BBFormChecklistContainer {
+			width: 66%;
+			float: left;
+			margin-left: 4%;
+		}
+		tbody tr td[colspan="2"] {
+			width: 66%;
+			float: left;
+		}
+	}
+
+}

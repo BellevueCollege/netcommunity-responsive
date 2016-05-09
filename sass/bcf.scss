@@ -1,0 +1,12 @@
+/*!
+  BC Foundation Stylesheet
+  Raw stylesheets managed through https://github.com/BellevueCollege/netcommunity-responsive
+*/
+
+/* BC Foundation Specific Overrides */
+$primary-color: #003D79;
+$nav-bg-hover: #162F57;
+
+
+/* Base CSS */
+@import "partials/base";
