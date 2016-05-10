@@ -1,0 +1,14 @@
+/*!
+  KBCS Stylesheet
+  Raw stylesheets managed through https://github.com/BellevueCollege/netcommunity-responsive
+  Version 1
+*/
+
+/* KBCS Specific Overrides */
+$primary-color: #603312;
+$nav-bg-hover: #252525;
+$background-color: #fff;
+
+
+/* Base CSS */
+@import "partials/base";

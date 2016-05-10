@@ -1,0 +1,109 @@
+/* Custom CSS */
+
+
+/* Overall Styles */
+
+/* Force images to be responsive */
+img {
+	height: auto;
+	max-width: 100%;
+}
+/* Add padding to wrapper */
+#wrapContentOuter {
+	margin-top: 1.5em;
+}
+
+/* Add focus indicator to all links/focusable elements */
+a:focus,
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+	border-radius: $global-radius;
+	box-shadow: 0 0 2px 3px #78aeda, 0 0 2px #78aeda inset;
+}
+
+
+/* Menu Styles */
+
+ul.menu {
+	display: block;
+	list-style: inside none none;
+	margin: 0px;
+
+	li {
+		margin-bottom: 0px;
+		padding: 0em;
+
+		border: 1px solid $light-grey;
+		background: transparent;
+
+		a {
+			width: 100%;
+			display: block;
+			padding: 0.5em 0px;
+
+			text-align: center;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+
+		a:link,
+		a:visited {
+			background: $nav-bg;
+			color: $nav-color;
+		}
+
+		a:active,
+		a:hover,
+		a:focus {
+			background: $nav-bg-hover;
+			color: $nav-color;
+		}
+	}
+}
+
+input[type="submit"].BBFormSubmitButton {
+	float:right;
+	border: 2px solid $nav-bg-hover;
+	background: $nav-bg;
+	color: $nav-color;
+}
+input[type="submit"].BBFormSubmitButton:hover,
+input[type="submit"].BBFormSubmitButton:active{
+	background: $nav-bg-hover;
+}
+input[type="submit"].BBFormSubmitButton:after {
+	clear:both;
+}
+@media ($bp-larger-than-tablet) {
+
+	body {
+		background: $background-color;
+	}
+
+	.container {
+		background: $content-background-color;
+		padding: 0 1.5em;
+	}
+	/* Menu */
+	ul.menu {
+		@include display-flex;
+		flex-wrap: wrap;
+
+		li {
+			@include flex-grow(1);
+		}
+		li:first-child a {
+			@include border-top-left-radius($nav-radius);
+			@include border-bottom-left-radius($nav-radius);
+		}
+		li:last-child a {
+			@include border-top-right-radius($nav-radius);
+			@include border-bottom-right-radius($nav-radius);
+		}
+	}
+}
+
+
